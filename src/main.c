@@ -53,7 +53,7 @@ void customer_init (char * str, Customer *customer) {
   customer->id = strtonum(strtok(str, ":"), 1, INT_MAX, NULL);
   customer->arrival = strtonum(strtok(NULL, ","), 1, INT_MAX, NULL);
   customer->running = strtonum(strtok(NULL, ","), 1, INT_MAX, NULL);
-  customer->priority = strtonum(strtok(NULL, ""), 1, INT_MAX, NULL);
+  customer->priority = strtonum(str, 1, INT_MAX, NULL);
 }
 
 #define grt(ATTR, NEXT_COND) \
